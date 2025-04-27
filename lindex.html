@@ -106,5 +106,17 @@
   &copy; 2025 Help the Neediest. All rights reserved.
 </footer>
 
-</body>
+<script></body>
+  document.querySelectorAll('nav a').forEach(anchor => {
+    anchor.addEventListener('click', function (e) {
+      if (this.getAttribute('href').startsWith('#')) {
+        e.preventDefault();
+        document.querySelector(this.getAttribute('href')).scrollIntoView({
+          behavior: 'smooth'
+        });
+      }
+    });
+  });
+</script>
+
 </html>
