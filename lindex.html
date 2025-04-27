@@ -2,22 +2,95 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>Help the Neediest</title>
-  <link rel="stylesheet" href="style.css">
+  <style>
+    body {
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      margin: 0; 
+      padding: 0; 
+      background: url('background.jpg') no-repeat center center fixed;
+      background-size: cover;
+      color: #333;
+    }
+    header {
+      display: flex; 
+      align-items: center; 
+      padding: 10px; 
+      background: rgba(255, 255, 255, 0.9);
+    }
+    header img {
+      height: 80px; 
+      margin-right: 15px;
+    }
+    header h1 {
+      margin: 0; 
+      font-size: 26px; 
+      color: #006400;
+    }
+    nav ul {
+      display: flex; 
+      gap: 15px; 
+      list-style: none; 
+      margin-left: auto; 
+      padding: 0;
+    }
+    nav a {
+      text-decoration: none; 
+      color: #333; 
+      font-weight: bold; 
+      transition: color 0.3s;
+    }
+    nav a:hover {
+      color: #006400;
+    }
+    main {
+      padding: 20px;
+      background: rgba(255, 255, 255, 0.9);
+      margin: 20px;
+      border-radius: 10px;
+    }
+    section {
+      margin-bottom: 40px;
+    }
+    h2 {
+      color: #006400;
+    }
+    footer {
+      text-align: center; 
+      padding: 20px; 
+      background: rgba(255, 255, 255, 0.9);
+      font-size: 14px;
+      margin-top: 30px;
+    }
+    .donate-button {
+      background-color: #28a745; 
+      color: white; 
+      padding: 15px 25px; 
+      border-radius: 8px; 
+      text-decoration: none; 
+      font-size: 18px; 
+      display: inline-block; 
+      margin-top: 20px;
+    }
+    .donate-button:hover {
+      background-color: #218838;
+    }
+  </style>
 </head>
+
 <body>
 
-<header style="display: flex; align-items: center; padding: 10px;">
-  <img src="logo.png" alt="Help the Neediest Logo" style="height: 80px; margin-right: 15px;">
+<header>
+  <img src="logo.png" alt="Help the Neediest Logo">
   <h1>Help the Neediest</h1>
-  <nav style="margin-left: auto;">
-    <ul style="display: flex; gap: 15px; list-style: none;">
+  <nav>
+    <ul>
       <li><a href="#about">About Us</a></li>
-      <li><a href="#vision">Our Vision</a></li>
+      <li><a href="#vision">Vision</a></li>
       <li><a href="#sponsorship">Sponsorship</a></li>
+      <li><a href="#donate">Donate</a></li>
       <li><a href="#contact">Contact</a></li>
-      <li><a href="#donate" style="color: green; font-weight: bold;">Donate</a></li>
     </ul>
   </nav>
 </header>
@@ -42,6 +115,7 @@
 
   <section id="sponsorship">
     <h2>Sponsorship Opportunities</h2>
+
     <h3>Platinum Sponsor ($5,000 and above)</h3>
     <ul>
       <li>Prominent logo placement on our website, newsletters, and event banners</li>
@@ -62,22 +136,39 @@
     </ul>
   </section>
 
-  <section id="donate" style="text-align: center; margin: 40px 0;">
+  <section id="donate" style="text-align: center;">
     <h2>Support Us with a Donation</h2>
-    <p>Every contribution, no matter how small, brings us closer to building a brighter future for children in need.</p>
-    <a href="https://www.paypal.com/donate" target="_blank" style="display: inline-block; background-color: #28a745; color: white; padding: 15px 25px; border-radius: 8px; text-decoration: none; font-size: 18px;">Donate Now</a>
+    <p>We accept donations through the following methods:</p>
+
+    <h3>Western Union</h3>
+    <p>Receiver Name: samuel twumasi<br>
+    Country: Liberia<br>
+    City: Monrovia</p>
+
+    <h3>MoneyGram</h3>
+    <p>Receiver Name: samuel twumasi<br>
+    Country: Liberia<br>
+    City: Monrovia</p>
+
+    <h3>Mobile Money</h3>
+    <p>MTN Mobile Money Number: +231 881979445<br>
+    Orange Money Number: +231 77 000 0000</p>
+
+    <p>After sending your donation, kindly send a confirmation message to our WhatsApp number below.</p>
+
+    <a href="#contact" class="donate-button">Contact Us</a>
   </section>
 
   <section id="contact">
     <h2>Contact Us</h2>
-    <p>Email: Available upon request</p>
-    <p>Website: <a href="https://helptheneediest.github.io/help-the-neediest/" target="_blank">Help the Neediest</a></p>
-    <p>Phone/WhatsApp: Available upon request</p>
+    <p>Email: Samuelktwumasi0@gmail.com</p>
+    <p>Website: <a href="https://helptheneediest.github.io/help-the-neediest/" target="_blank">Visit Our Website</a></p>
+    <p>Phone/WhatsApp: <a href="https://wa.me/231881979445" target="_blank">+231 881979445</a></p>
   </section>
 
 </main>
 
-<footer style="text-align: center; padding: 20px;">
+<footer>
   <p>© 2025 Help the Neediest. All rights reserved.</p>
 </footer>
 
