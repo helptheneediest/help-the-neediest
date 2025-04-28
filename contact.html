@@ -1,69 +1,110 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Help the Neediest - Contact</title>
-  <link rel="icon" type="image/png" href="logo.png">
-  <style>
-    body {
-      font-family: Arial, sans-serif;
-      margin: 0; padding: 0;
-      background: #f2f2f2;
-      color: #333;
-    }
-    header {
-      background-color: #0275d8;
-      color: white;
-      padding: 20px;
-      text-align: center;
-    }
-    nav {
-      background: #025aa5;
-      padding: 10px;
-      text-align: center;
-    }
-    nav a {
-      color: white;
-      margin: 0 15px;
-      text-decoration: none;
-      font-weight: bold;
-    }
-    section {
-      padding: 30px;
-      text-align: center;
-    }
-    footer {
-      background: #222;
-      color: #ccc;
-      text-align: center;
-      padding: 15px;
-      margin-top: 30px;
-    }
-  </style>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact | Help the Neediest</title>
+    <link rel="icon" type="image/png" href="logo.png">
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background: #f9f9f9;
+            color: #333;
+        }
+        header {
+            background-color: #0275d8;
+            color: white;
+            padding: 20px;
+            text-align: center;
+        }
+        nav {
+            background: #025aa5;
+            padding: 10px;
+            text-align: center;
+        }
+        nav a {
+            color: white;
+            margin: 0 15px;
+            text-decoration: none;
+            font-weight: bold;
+        }
+        section {
+            padding: 30px;
+        }
+        form {
+            max-width: 500px;
+            margin: auto;
+            background: #fff;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0,0,0,0.1);
+        }
+        input, textarea {
+            width: 100%;
+            padding: 10px;
+            margin: 8px 0;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+        }
+        button {
+            background-color: #0275d8;
+            color: white;
+            padding: 10px 20px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+        button:hover {
+            background-color: #025aa5;
+        }
+        footer {
+            background: #222;
+            color: #ccc;
+            text-align: center;
+            padding: 15px;
+            margin-top: 30px;
+        }
+    </style>
 </head>
 
 <body>
+
 <header>
-  <img src="logo.png" alt="Logo" width="100" style="border-radius: 50px;">
-  <h1>Contact Help the Neediest</h1>
+    <img src="logo.png" alt="Logo" width="100" style="border-radius: 50px;">
+    <h1>Help the Neediest</h1>
+    <p>Giving Hope. Changing Lives.</p>
 </header>
 
 <nav>
-  <a href="index.html">Home</a>
-  <a href="donate.html">Donate</a>
-  <a href="contact.html">Contact</a>
+    <a href="index.html">Home</a>
+    <a href="donate.html">Donate</a>
+    <a href="contact.html">Contact</a>
 </nav>
 
-<section>
-  <h2>Get in Touch</h2>
-  <p>Email: <strong>helptheneediest@users.noreply.github.com</strong></p>
-  <p>Phone/WhatsApp: <strong>+231 881979445</strong></p>
-  <p>Website: <a href="https://helptheneediest.github.io/help-the-neediest/" target="_blank">Visit our site</a></p>
+<section id="contact">
+    <h2>Contact Us</h2>
+    <p>We would love to hear from you! Please fill out the form below:</p>
+
+    <form action="https://formsubmit.co/helptheneediest@gmail.com" method="POST">
+        <input type="text" name="name" placeholder="Your Name" required>
+        <input type="email" name="email" placeholder="Your Email Address" required>
+        <textarea name="message" rows="5" placeholder="Your Message" required></textarea>
+        <button type="submit">Send Message</button>
+    </form>
+
+    <p style="text-align:center; margin-top:20px;">
+        <strong>Phone / WhatsApp:</strong> +231 881979445 <br>
+        <strong>Email:</strong> (Available on request) <br>
+        <strong>Location:</strong> Liberia, West Africa <br>
+        <strong>Website:</strong> <a href="https://helptheneediest.github.io/help-the-neediest/" target="_blank">Visit Here</a>
+    </p>
 </section>
 
 <footer>
-  <p>&copy; 2025 Help the Neediest. All rights reserved.</p>
+    <p>&copy; 2025 Help the Neediest. All rights reserved.</p>
 </footer>
+
 </body>
 </html>
