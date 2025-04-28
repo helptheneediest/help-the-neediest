@@ -3,94 +3,126 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Help the Neediest - Donate</title>
-  <link rel="icon" href="logo.png">
+  <title>Donate - Help the Neediest</title>
   <style>
-    body {font-family: Arial, sans-serif; margin: 0; padding: 0; background: #f2f2f2; color: #333;}
-    header {background: #0275d8; color: white; padding: 20px; text-align: center;}
-    nav {background: #025aa5; padding: 10px; text-align: center;}
-    nav a {color: white; margin: 0 15px; text-decoration: none; font-weight: bold;}
-    section {padding: 30px;}
-    .donate-box {background-color: #dff0d8; padding: 20px; border-radius: 8px; margin-top: 20px;}
-    .confirm-btn {display: inline-block; background: #5cb85c; color: white; padding: 12px 20px; border-radius: 5px; text-decoration: none; margin-top: 15px;}
-    #thank-you {
+    body {
+      font-family: Arial, sans-serif;
+      background: #f2f2f2;
+      margin: 0;
+      padding: 0;
+      text-align: center;
+      color: #333;
+    }
+    header {
+      background: #0275d8;
+      padding: 20px;
+      color: white;
+    }
+    .donate-section {
+      padding: 40px 20px;
+    }
+    .donate-btn {
+      background-color: #5cb85c;
+      color: white;
+      padding: 15px 25px;
+      font-size: 18px;
+      border: none;
+      border-radius: 5px;
+      margin-top: 20px;
+      cursor: pointer;
+    }
+    .popup {
       display: none;
       position: fixed;
-      bottom: 20px;
-      right: 20px;
-      background: #5cb85c;
-      color: white;
-      padding: 15px 20px;
-      border-radius: 8px;
-      box-shadow: 0px 4px 10px rgba(0,0,0,0.2);
-      font-size: 16px;
-      z-index: 1000;
-      animation: fadein 0.5s, fadeout 0.5s 4.5s;
+      top: 0; left: 0; right: 0; bottom: 0;
+      background: rgba(0,0,0,0.6);
+      justify-content: center;
+      align-items: center;
+      z-index: 999;
     }
-    @keyframes fadein {
-      from {bottom: 0; opacity: 0;}
-      to {bottom: 20px; opacity: 1;}
+    .popup-content {
+      background: white;
+      padding: 30px;
+      border-radius: 10px;
+      text-align: center;
+      animation: popup 0.3s ease;
     }
-    @keyframes fadeout {
-      from {bottom: 20px; opacity: 1;}
-      to {bottom: 0; opacity: 0;}
+    @keyframes popup {
+      from { transform: scale(0.7); opacity: 0; }
+      to { transform: scale(1); opacity: 1; }
     }
-    footer {background: #222; color: #ccc; text-align: center; padding: 15px; margin-top: 30px;}
+    .checkmark {
+      width: 80px;
+      height: 80px;
+      margin: 0 auto 20px;
+    }
+    .checkmark:after {
+      content: '';
+      position: absolute;
+      left: 28px;
+      top: 50px;
+      width: 25px;
+      height: 50px;
+      border: solid green;
+      border-width: 0 6px 6px 0;
+      transform: rotate(45deg);
+    }
+    footer {
+      background: #222;
+      color: #ccc;
+      padding: 20px;
+      margin-top: 40px;
+    }
+    ul {
+      text-align: left;
+      display: inline-block;
+      margin-top: 20px;
+    }
   </style>
 </head>
+
 <body>
 
 <header>
-  <img src="logo.png" alt="Logo" width="100" style="border-radius: 50%;">
   <h1>Donate to Help the Neediest</h1>
+  <p>Every donation changes lives!</p>
 </header>
 
-<nav>
-  <a href="index.html">Home</a>
-  <a href="about.html">About</a>
-  <a href="donate.html">Donate</a>
-</nav>
+<div class="donate-section">
+  <h2>Receiver Details for Donations:</h2>
+  <ul>
+    <li><strong>Western Union Receiver Name:</strong> SAMUEL TWUMASI</li>
+    <li><strong>MoneyGram Receiver Name:</strong> SAMUEL TWUMASI</li>
+    <li><strong>Mobile Money Number:</strong> +231 881979445</li>
+  </ul>
 
-<section>
-  <h2>Support Our Mission</h2>
-  <p>Your donation helps provide education, food, healthcare, and hope to the most vulnerable children.</p>
+  <button class="donate-btn" onclick="showPopup()">Confirm Donation</button>
 
-  <div class="donate-box">
-    <h3>Donation Methods:</h3>
-    <ul>
-      <li><strong>Western Union:</strong> Receiver Name: <b>Samuel Twumasi</b></li>
-      <li><strong>MoneyGram:</strong> Receiver Name: <b>Samuel Twumasi</b></li>
-      <li><strong>Mobile Money (MoMo):</strong> <b>+231 881979445</b></li>
-    </ul>
+  <p style="margin-top:30px;">
+    Need Help? <a href="https://wa.me/231881979445" target="_blank" style="color: #0275d8;">Chat on WhatsApp</a>
+  </p>
+</div>
 
-    <h3>Benefits for Donors:</h3>
-    <ul>
-      <li>Recognition on our social media</li>
-      <li>Periodic updates on project impact</li>
-      <li>Certificate of Appreciation</li>
-    </ul>
-
-    <h3>After You Donate:</h3>
-    <p>Please confirm your donation with us via WhatsApp.</p>
-
-    <a class="confirm-btn" href="https://wa.me/231881979445" target="_blank" onclick="showThankYou()">Confirm Donation via WhatsApp</a>
+<div class="popup" id="thankyouPopup">
+  <div class="popup-content">
+    <div class="checkmark"></div>
+    <h2>Thank You!</h2>
+    <p>Your support is highly appreciated. Together, we are making a difference!</p>
+    <button class="donate-btn" onclick="closePopup()">Close</button>
   </div>
-</section>
-
-<div id="thank-you">🎉 Thank you for your support! Message sent successfully.</div>
+</div>
 
 <footer>
   <p>&copy; 2025 Help the Neediest. All rights reserved.</p>
 </footer>
 
 <script>
-  function showThankYou() {
-    var thankYou = document.getElementById('thank-you');
-    thankYou.style.display = 'block';
-    setTimeout(function(){
-      thankYou.style.display = 'none';
-    }, 5000); // hides after 5 seconds
-  }
+function showPopup() {
+  document.getElementById('thankyouPopup').style.display = 'flex';
+}
+function closePopup() {
+  document.getElementById('thankyouPopup').style.display = 'none';
+}
 </script>
 
 </body>
