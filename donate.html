@@ -3,92 +3,93 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Make a Donation - Help the Neediest</title>
+    <title>Donate | Help the Neediest</title>
     <link rel="icon" type="image/png" href="logo.png">
     <style>
         body {
             font-family: Arial, sans-serif;
-            background: #f2f2f2;
             margin: 0;
             padding: 0;
+            background: #f9f9f9;
+            color: #333;
         }
-        .container {
-            max-width: 600px;
-            background: white;
-            margin: 50px auto;
-            padding: 30px;
-            border-radius: 10px;
-            box-shadow: 0 0 10px #ccc;
-        }
-        h1 {
+        header {
+            background-color: #0275d8;
+            color: white;
+            padding: 20px;
             text-align: center;
-            color: #0275d8;
         }
-        form {
-            margin-top: 20px;
+        nav {
+            background: #025aa5;
+            padding: 10px;
+            text-align: center;
         }
-        input, textarea, select {
-            width: 100%;
-            padding: 12px;
-            margin: 8px 0;
-            border-radius: 5px;
-            border: 1px solid #ccc;
+        nav a {
+            color: white;
+            margin: 0 15px;
+            text-decoration: none;
+            font-weight: bold;
         }
-        button {
-            width: 100%;
-            padding: 15px;
+        section {
+            padding: 30px;
+        }
+        .donate-btn {
+            display: inline-block;
             background-color: #5cb85c;
             color: white;
-            border: none;
+            padding: 15px 25px;
             font-size: 18px;
+            text-decoration: none;
             border-radius: 5px;
-            cursor: pointer;
-        }
-        button:hover {
-            background-color: #4cae4c;
-        }
-        .back-link {
-            text-align: center;
             margin-top: 20px;
         }
-        .back-link a {
-            text-decoration: none;
-            color: #0275d8;
+        footer {
+            background: #222;
+            color: #ccc;
+            text-align: center;
+            padding: 15px;
+            margin-top: 30px;
         }
     </style>
 </head>
 
 <body>
 
-<div class="container">
-    <h1>Make a Donation</h1>
-    <form action="https://formspree.io/f/your-form-id" method="POST">
-        <label for="fullname">Full Name</label>
-        <input type="text" id="fullname" name="fullname" required>
+<header>
+    <img src="logo.png" alt="Logo" width="100" style="border-radius: 50px;">
+    <h1>Help the Neediest</h1>
+    <p>Giving Hope. Changing Lives.</p>
+</header>
 
-        <label for="email">Email Address</label>
-        <input type="email" id="email" name="email" required>
+<nav>
+    <a href="index.html">Home</a>
+    <a href="donate.html">Donate</a>
+    <a href="contact.html">Contact</a>
+</nav>
 
-        <label for="amount">Donation Amount (USD)</label>
-        <input type="number" id="amount" name="amount" required>
+<section id="donate">
+    <h2>Support Our Work</h2>
+    <p>Your donation can change lives. Every contribution makes a real difference!</p>
+    <ul>
+        <li><strong>Western Union:</strong> Receiver Name: Samuel Twumasi | Country: Liberia</li>
+        <li><strong>MoneyGram:</strong> Receiver Name: Samuel Twumasi | Country: Liberia</li>
+        <li><strong>Mobile Money:</strong> +231 881979445</li>
+    </ul>
+    <a class="donate-btn" href="https://wa.me/231881979445" target="_blank">Donate Now via WhatsApp</a>
 
-        <label for="method">Donation Method</label>
-        <select id="method" name="method" required>
-            <option value="Western Union">Western Union</option>
-            <option value="MoneyGram">MoneyGram</option>
-            <option value="Mobile Money">Mobile Money</option>
-        </select>
+    <h2>Why Donate?</h2>
+    <ul>
+        <li>Help educate underprivileged children</li>
+        <li>Provide food, shelter, and healthcare</li>
+        <li>Receive appreciation certificates</li>
+        <li>Be publicly acknowledged on our website (optional)</li>
+        <li>Make a real difference in someone's life</li>
+    </ul>
+</section>
 
-        <label for="message">Additional Message (optional)</label>
-        <textarea id="message" name="message" rows="4"></textarea>
-
-        <button type="submit">Submit Donation Info</button>
-    </form>
-
-    <div class="back-link">
-        <a href="https://helptheneediest.github.io/help-the-neediest/">← Back to Home</a>
-    </div>
-</div>
+<footer>
+    <p>&copy; 2025 Help the Neediest. All rights reserved.</p>
+</footer>
 
 </body>
 </html>
