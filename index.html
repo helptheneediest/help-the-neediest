@@ -6,11 +6,14 @@
     <title>Help the Neediest</title>
     <link rel="icon" type="image/png" href="logo.png">
     <style>
+        html {
+            scroll-behavior: smooth;
+        }
         body {
             font-family: Arial, sans-serif;
             margin: 0;
             padding: 0;
-            background: #f2f2f2;
+            background: #f9f9f9;
             color: #333;
         }
         header {
@@ -29,26 +32,44 @@
             margin: 0 15px;
             text-decoration: none;
             font-weight: bold;
+            font-size: 18px;
+        }
+        nav a:hover {
+            text-decoration: underline;
         }
         section {
-            padding: 30px;
+            padding: 40px 20px;
+            max-width: 900px;
+            margin: auto;
         }
         .donate-btn {
             display: inline-block;
             background-color: #5cb85c;
             color: white;
             padding: 15px 25px;
-            font-size: 18px;
+            font-size: 20px;
             text-decoration: none;
-            border-radius: 5px;
-            margin-top: 20px;
+            border-radius: 8px;
+            margin-top: 25px;
         }
         footer {
             background: #222;
             color: #ccc;
             text-align: center;
-            padding: 15px;
-            margin-top: 30px;
+            padding: 20px;
+            margin-top: 40px;
+        }
+        ul {
+            list-style-type: none;
+            padding: 0;
+        }
+        ul li {
+            margin-bottom: 10px;
+            font-size: 18px;
+        }
+        img {
+            border-radius: 50%;
+            margin-bottom: 10px;
         }
     </style>
 </head>
@@ -56,7 +77,7 @@
 <body>
 
 <header>
-    <img src="logo.png" alt=" Logo" width="100" style="border-radius: 50px;">
+    <img src="logo.png" alt="Help the Neediest Logo" width="100">
     <h1>Help the Neediest</h1>
     <p>Giving Hope. Changing Lives.</p>
 </header>
@@ -74,20 +95,20 @@
 
 <section id="donate">
     <h2>Support Our Work</h2>
-    <p>Your donation can change lives. Every contribution makes a real difference!</p>
+    <p>Your donation can change lives. Every contribution matters!</p>
     <ul>
-        <li><strong>Western Union:</strong> Send to: [SAMUEL TWUMASI]</li>
-        <li><strong>MoneyGram:</strong> Send to: [SAMUEL TWUMASI]</li>
-        <li><strong>Mobile Money:</strong> +231 881979445</li>
+        <li><strong>Western Union:</strong> Receiver Name - SAMUEL TWUMASI</li>
+        <li><strong>MoneyGram:</strong> Receiver Name - SAMUEL TWUMASI</li>
+        <li><strong>Mobile Money:</strong> Number - +231 881979445</li>
     </ul>
     <a class="donate-btn" href="https://wa.me/231881979445" target="_blank">Donate Now via WhatsApp</a>
 </section>
 
 <section id="contact">
     <h2>Contact Us</h2>
-    <p>Email: Available upon request</p>
-    <p>Phone/WhatsApp: +231 881979445</p>
-    <p>Website: <a href="https://helptheneediest.github.io/help-the-neediest/" target="_blank">Visit Here</a></p>
+    <p><strong>Email:</strong> helptheneediest@users.noreply.github.com</p>
+    <p><strong>Phone/WhatsApp:</strong> +231 881979445</p>
+    <p><strong>Website:</strong> <a href="https://helptheneediest.github.io/help-the-neediest/" target="_blank">Visit Here</a></p>
 </section>
 
 <footer>
