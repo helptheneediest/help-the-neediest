@@ -13,6 +13,28 @@
     section {padding: 30px;}
     .donate-box {background-color: #dff0d8; padding: 20px; border-radius: 8px; margin-top: 20px;}
     .confirm-btn {display: inline-block; background: #5cb85c; color: white; padding: 12px 20px; border-radius: 5px; text-decoration: none; margin-top: 15px;}
+    #thank-you {
+      display: none;
+      position: fixed;
+      bottom: 20px;
+      right: 20px;
+      background: #5cb85c;
+      color: white;
+      padding: 15px 20px;
+      border-radius: 8px;
+      box-shadow: 0px 4px 10px rgba(0,0,0,0.2);
+      font-size: 16px;
+      z-index: 1000;
+      animation: fadein 0.5s, fadeout 0.5s 4.5s;
+    }
+    @keyframes fadein {
+      from {bottom: 0; opacity: 0;}
+      to {bottom: 20px; opacity: 1;}
+    }
+    @keyframes fadeout {
+      from {bottom: 20px; opacity: 1;}
+      to {bottom: 0; opacity: 0;}
+    }
     footer {background: #222; color: #ccc; text-align: center; padding: 15px; margin-top: 30px;}
   </style>
 </head>
@@ -51,13 +73,25 @@
     <h3>After You Donate:</h3>
     <p>Please confirm your donation with us via WhatsApp.</p>
 
-    <a class="confirm-btn" href="https://wa.me/231881979445" target="_blank">Confirm Donation via WhatsApp</a>
+    <a class="confirm-btn" href="https://wa.me/231881979445" target="_blank" onclick="showThankYou()">Confirm Donation via WhatsApp</a>
   </div>
 </section>
+
+<div id="thank-you">🎉 Thank you for your support! Message sent successfully.</div>
 
 <footer>
   <p>&copy; 2025 Help the Neediest. All rights reserved.</p>
 </footer>
+
+<script>
+  function showThankYou() {
+    var thankYou = document.getElementById('thank-you');
+    thankYou.style.display = 'block';
+    setTimeout(function(){
+      thankYou.style.display = 'none';
+    }, 5000); // hides after 5 seconds
+  }
+</script>
 
 </body>
 </html>
