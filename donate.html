@@ -26,7 +26,7 @@
     ul {
       line-height: 1.8;
     }
-    .donate-btn {
+    .btn {
       display: block;
       width: 100%;
       padding: 15px;
@@ -37,6 +37,9 @@
       font-size: 18px;
       border-radius: 5px;
       margin-top: 20px;
+    }
+    .btn-print, .btn-download {
+      background-color: #2980b9;
     }
     .popup {
       display: none;
@@ -58,7 +61,7 @@
 
   <h1>Support Our Mission</h1>
 
-  <div class="donation-details">
+  <div class="donation-details" id="donationSection">
     <h2>Donation Receiving Methods</h2>
     <p>Please send your donation through one of the following methods and then confirm via WhatsApp:</p>
     <ul>
@@ -67,7 +70,9 @@
       <li><strong>Mobile Money:</strong> +231 881979445 (Receiver: TWUMASI SAMUEL)</li>
     </ul>
 
-    <a class="donate-btn" href="https://wa.me/231881979445" target="_blank" onclick="showPopup()">Send Confirmation via WhatsApp</a>
+    <a class="btn" href="https://wa.me/231881979445" target="_blank" onclick="showPopup()">Send Confirmation via WhatsApp</a>
+    <button class="btn btn-print" onclick="window.print()">Print Details</button>
+    <button class="btn btn-download" onclick="downloadText()">Download Details</button>
 
     <div class="popup" id="popupMessage">
       Thank you for your support! Please complete your confirmation in WhatsApp.
@@ -77,6 +82,23 @@
   <script>
     function showPopup() {
       document.getElementById('popupMessage').style.display = 'block';
+    }
+
+    function downloadText() {
+      const text = `
+Donation Receiving Methods:
+
+Western Union: Receiver Name – TWUMASI SAMUEL
+MoneyGram:     Receiver Name – TWUMASI SAMUEL
+Mobile Money:  +231 881979445 (Receiver: TWUMASI SAMUEL)
+
+Please send confirmation to WhatsApp: +231 881979445
+      `;
+      const blob = new Blob([text], { type: "text/plain" });
+      const link = document.createElement("a");
+      link.href = window.URL.createObjectURL(blob);
+      link.download = "HTN_Donation_Instructions.txt";
+      link.click();
     }
   </script>
 
