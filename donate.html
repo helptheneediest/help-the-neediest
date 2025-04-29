@@ -1,112 +1,34 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Donate - Help the Neediest</title>
-  <style>
-    body {
-      font-family: Arial, sans-serif;
-      background: #f4f4f9;
-      color: #333;
-      padding: 20px;
-    }
-    h1 {
-      color: #d35400;
-      text-align: center;
-    }
-    .donation-details {
-      background: #fff;
-      border-radius: 10px;
-      padding: 20px;
-      max-width: 650px;
-      margin: auto;
-      box-shadow: 0 2px 6px rgba(0,0,0,0.15);
-    }
-    ul {
-      line-height: 1.8;
-    }
-    .btn {
-      display: block;
-      width: 100%;
-      padding: 15px;
-      background-color: #27ae60;
-      color: white;
-      text-align: center;
-      text-decoration: none;
-      font-size: 18px;
-      border-radius: 5px;
-      margin-top: 20px;
-      border: none;
-      cursor: pointer;
-    }
-    .btn-print, .btn-download {
-      background-color: #2980b9;
-    }
-    .popup {
-      display: none;
-      background-color: #2ecc71;
-      color: white;
-      padding: 15px;
-      border-radius: 5px;
-      text-align: center;
-      margin-top: 20px;
-      animation: fadeIn 0.5s ease-in-out;
-    }
-    @keyframes fadeIn {
-      from { opacity: 0; }
-      to { opacity: 1; }
-    }
-  </style>
-</head>
-<body>
+<section id="donate" style="padding: 30px; background-color: #fff3e0;">
+  <h2>Support Our Mission</h2>
+  <p>Your support helps us build hostels, libraries, playgrounds, and provide essentials for children in need.</p>
 
-  <h1>Support Our Mission</h1>
+  <h3>Donation Methods</h3>
+  <p><strong>Founder & Receiver:</strong> TWUMASI SAMUEL</p>
+  <ul>
+    <li><strong>Western Union</strong>: Send to TWUMASI SAMUEL</li>
+    <li><strong>MoneyGram</strong>: Send to TWUMASI SAMUEL</li>
+    <li><strong>Mobile Money</strong>: +231 881979445</li>
+  </ul>
 
-  <div class="donation-details" id="donationSection">
-    <h2>Donation Receiving Methods</h2>
-    <p>Please send your donation using one of the following methods. <strong>TWUMASI SAMUEL</strong>, the founder of Help the Neediest, is the receiver:</p>
-    <ul>
-      <li><strong>Western Union:</strong> Receiver Name – TWUMASI SAMUEL (Founder)</li>
-      <li><strong>MoneyGram:</strong> Receiver Name – TWUMASI SAMUEL (Founder)</li>
-      <li><strong>Mobile Money:</strong> +231 881979445 (Receiver: TWUMASI SAMUEL, Founder)</li>
-    </ul>
+  <button onclick="showThankYouPopup()" style="background-color: #28a745; color: white; padding: 15px 25px; font-size: 16px; border: none; border-radius: 5px; cursor: pointer;">
+    I've Donated - Confirm Now
+  </button>
 
-    <a class="btn" href="https://wa.me/231881979445" target="_blank" onclick="showPopup()">Send Confirmation via WhatsApp</a>
-    <button class="btn btn-print" onclick="window.print()">Print Details</button>
-    <button class="btn btn-download" onclick="downloadText()">Download Details</button>
-
-    <div class="popup" id="popupMessage">
-      Thank you for your support! Please send the donation details in WhatsApp or our Gmail.
-    </div>
+  <div id="thankYouPopup" style="display:none; position: fixed; top: 30%; left: 50%; transform: translate(-50%, -30%); background: white; border: 2px solid #28a745; padding: 25px; border-radius: 8px; box-shadow: 0 4px 8px rgba(0,0,0,0.2); text-align: center;">
+    <h3>Thank you for your support!</h3>
+    <p>Please send the donation details in WhatsApp or our Gmail.</p>
+    <a href="https://wa.me/231881979445" target="_blank" style="display: inline-block; margin: 10px; background: #25D366; color: white; padding: 10px 20px; border-radius: 5px; text-decoration: none;">Send via WhatsApp</a>
+    <a href="mailto:Samuelktwumasi0@gmail.com" style="display: inline-block; margin: 10px; background: #d44638; color: white; padding: 10px 20px; border-radius: 5px; text-decoration: none;">Send via Gmail</a>
+    <br><br>
+    <button onclick="closePopup()" style="margin-top: 15px; background: #999; color: white; padding: 8px 15px; border: none; border-radius: 5px;">Close</button>
   </div>
 
   <script>
-    function showPopup() {
-      document.getElementById('popupMessage').style.display = 'block';
+    function showThankYouPopup() {
+      document.getElementById('thankYouPopup').style.display = 'block';
     }
-
-    function downloadText() {
-      const text = `
-Donation Receiving Methods
-
-Receiver: TWUMASI SAMUEL (Founder, Help the Neediest)
-
-Western Union
-MoneyGram
-Mobile Money: +231 881979445
-
-Please confirm your donation by sending the details via:
-- WhatsApp: +231 881979445
-- Email: helptheneediest@gmail.com
-      `;
-      const blob = new Blob([text], { type: "text/plain" });
-      const link = document.createElement("a");
-      link.href = window.URL.createObjectURL(blob);
-      link.download = "HTN_Donation_Instructions.txt";
-      link.click();
+    function closePopup() {
+      document.getElementById('thankYouPopup').style.display = 'none';
     }
   </script>
-
-</body>
-</html>
+</section>
