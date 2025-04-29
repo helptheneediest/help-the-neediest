@@ -3,17 +3,15 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Help the Neediest</title>
-    <link rel="icon" type="image/png" href="mylogo.png">
+    <title>Donate | Help the Neediest</title>
+    <link rel="icon" type="image/png" href="logo.png">
     <style>
         body {
             font-family: Arial, sans-serif;
             margin: 0;
             padding: 0;
-            background: #f2f2f2;
+            background: #f9f9f9;
             color: #333;
-            font-size: 16px;
-            line-height: 1.6;
         }
         header {
             background-color: #0275d8;
@@ -31,21 +29,20 @@
             margin: 0 15px;
             text-decoration: none;
             font-weight: bold;
-            display: inline-block;
-            padding: 10px 20px;
         }
         section {
             padding: 30px;
+            max-width: 800px;
+            margin: auto;
+            background: #fff;
+            box-shadow: 0 0 10px rgba(0,0,0,0.05);
+            border-radius: 8px;
         }
-        .donate-btn {
-            display: inline-block;
-            background-color: #5cb85c;
-            color: white;
-            padding: 15px 25px;
-            font-size: 18px;
-            text-decoration: none;
-            border-radius: 5px;
-            margin-top: 20px;
+        h2 {
+            color: #0275d8;
+        }
+        ul {
+            line-height: 1.8;
         }
         footer {
             background: #222;
@@ -54,93 +51,45 @@
             padding: 15px;
             margin-top: 30px;
         }
-
-        @media (max-width: 768px) {
-            header, section, footer {
-                padding: 15px;
-                text-align: center;
-            }
-            nav a {
-                display: block;
-                margin: 10px 0;
-            }
-            .donate-btn {
-                width: 100%;
-                box-sizing: border-box;
-            }
-        }
     </style>
 </head>
-
 <body>
 
 <header>
-    <img src="mylogo.png" alt=" Logo" width="100" style="border-radius: 50px;">
+    <img src="logo.png" alt="Logo" width="80" style="border-radius: 50%;">
     <h1>Help the Neediest</h1>
-    <p>Giving Hope. Changing Lives.</p>
+    <p>Support our cause and make a difference</p>
 </header>
 
 <nav>
-    <a href="#about">About</a>
-    <a href="#donate">Donate</a>
-    <a href="#contact">Contact</a>
+    <a href="index.html">Home</a>
+    <a href="donate.html">Donate</a>
+    <a href="contact.html">Contact</a>
 </nav>
 
-<section id="about">
-    <h2>About Us</h2>
-    <p>We are a non-profit organization dedicated to supporting vulnerable children by providing education, shelter, healthcare, and life skills training. Together, we can create a better future for the neediest children.</p>
-</section>
+<section>
+    <h2>Support Our Mission</h2>
+    <p>Your donation can change lives. Every contribution helps us reach and support more vulnerable children in need of education, healthcare, and shelter.</p>
 
-<section id="donate" style="padding: 30px; background-color: #fff3e0;">
-  <h2>Support Our Mission</h2>
-  <p>Your support helps us build hostels, libraries, playgrounds, and provide essentials for children in need.</p>
+    <h3>How to Donate</h3>
+    <ul>
+        <li><strong>Western Union:</strong> Send to: <em>SAMUEL TWUMASI</em></li>
+        <li><strong>MoneyGram:</strong> Send to: <em>SAMUEL TWUMASI</em></li>
+        <li><strong>Mobile Money:</strong> <em>+231 881979445</em></li>
+    </ul>
 
-  
-  </ul>
-
-  <button onclick="showThankYouPopup()" style="background-color: #28a745; color: white; padding: 15px 25px; font-size: 16px; border: none; border-radius: 5px; cursor: pointer;">
-    I've Donated - Confirm Now
-  </button>
-
-  <div id="thankYouPopup" style="display:none; position: fixed; top: 30%; left: 50%; transform: translate(-50%, -30%); background: white; border: 2px solid #28a745; padding: 25px; border-radius: 8px; box-shadow: 0 4px 8px rgba(0,0,0,0.2); text-align: center;">
-    <h3>Thank you for your support!</h3>
-    <p>Please send the donation details in WhatsApp or our Gmail.</p>
-    <a href="https://wa.me/231881979445" target="_blank" style="display: inline-block; margin: 10px; background: #25D366; color: white; padding: 10px 20px; border-radius: 5px; text-decoration: none;">Send via WhatsApp</a>
-    <a href="mailto:helptheneediest@gmail.com" style="display: inline-block; margin: 10px; background: #d44638; color: white; padding: 10px 20px; border-radius: 5px; text-decoration: none;">Send via Gmail</a>
-    <br><br>
-    <button onclick="closePopup()" style="margin-top: 15px; background: #999; color: white; padding: 8px 15px; border: none; border-radius: 5px;">Close</button>
-  </div>
-
-  <script>
-    function showThankYouPopup() {
-      document.getElementById('thankYouPopup').style.display = 'block';
-    }
-    function closePopup() {
-      document.getElementById('thankYouPopup').style.display = 'none';
-    }
-  </script>
-</section>
-
-</section>
-
-<section id="contact">
-    <h2>Contact Us</h2>
-    <p>Email: Samuelktwumasi0@gmail.com</p>
-    <p>Phone/WhatsApp: +231 881979445</p>
-    <p>Website: <a href="https://helptheneediest.github.io/help-the-neediest/" target="_blank">Visit Here</a></p>
+    <h3>Why Donate?</h3>
+    <ul>
+        <li>Make a real impact in someone's life</li>
+        <li>Receive regular updates and stories from our beneficiaries</li>
+        <li>Eligible donors may receive public recognition and thank-you certificates</li>
+        <li>Contribute to sustainable community development</li>
+    </ul>
 </section>
 
 <footer>
     <p>&copy; 2025 Help the Neediest. All rights reserved.</p>
 </footer>
-
-<script>
-    function showThankYou() {
-        setTimeout(function() {
-            alert("Thank you for your support! Please send the donation details in WhatsApp or our Gmail.");
-        }, 1000);
-    }
-</script>
 
 </body>
 </html>
