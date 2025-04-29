@@ -12,6 +12,8 @@
             padding: 0;
             background: #f2f2f2;
             color: #333;
+            font-size: 16px;
+            line-height: 1.6;
         }
         header {
             background-color: #0275d8;
@@ -29,6 +31,8 @@
             margin: 0 15px;
             text-decoration: none;
             font-weight: bold;
+            display: inline-block;
+            padding: 10px 20px;
         }
         section {
             padding: 30px;
@@ -50,13 +54,28 @@
             padding: 15px;
             margin-top: 30px;
         }
+
+        @media (max-width: 768px) {
+            header, section, footer {
+                padding: 15px;
+                text-align: center;
+            }
+            nav a {
+                display: block;
+                margin: 10px 0;
+            }
+            .donate-btn {
+                width: 100%;
+                box-sizing: border-box;
+            }
+        }
     </style>
 </head>
 
 <body>
 
 <header>
-    <img src="mylogo.png" alt="Logo" width="100" style="border-radius: 50px;">
+    <img src="mylogo.png" alt=" Logo" width="100" style="border-radius: 50px;">
     <h1>Help the Neediest</h1>
     <p>Giving Hope. Changing Lives.</p>
 </header>
@@ -71,46 +90,16 @@
     <h2>About Us</h2>
     <p>We are a non-profit organization dedicated to supporting vulnerable children by providing education, shelter, healthcare, and life skills training. Together, we can create a better future for the neediest children.</p>
 </section>
-<section id="about">
-    <h2>About Us</h2>
-    <p>We are a non-profit organization dedicated to supporting vulnerable children by providing education, shelter, healthcare, and life skills training. Together, we can create a better future for the neediest children.</p>
-</section>
-
-<section id="needs">
-    
-<section id="needs" style="background: #ffffff; padding: 40px 30px; border-top: 1px solid #ddd;">
-    <h2 style="color: #0275d8; font-size: 28px;">What We Need</h2>
-    <p style="font-size: 16px;">Your donation helps us provide a safe, nurturing, and empowering space for vulnerable children. Here are some of our current needs:</p>
-    <ul style="line-height: 2; font-size: 16px; list-style: none; padding-left: 0;">
-        <li><i class="fas fa-house-user" style="color: #0275d8;"></i> <strong>Hostel:</strong> Safe and secure accommodation for children</li>
-        <li><i class="fas fa-book" style="color: #5cb85c;"></i> <strong>Library:</strong> Books and learning materials to promote education</li>
-        <li><i class="fas fa-basketball-ball" style="color: #f0ad4e;"></i> <strong>Playground:</strong> Space for play and physical development</li>
-        <li><i class="fas fa-pencil-alt" style="color: #d9534f;"></i> <strong>School Supplies:</strong> Uniforms, backpacks, notebooks, pens</li>
-        <li><i class="fas fa-utensils" style="color: #5bc0de;"></i> <strong>Food & Water:</strong> Nutritious meals and clean drinking water</li>
-        <li><i class="fas fa-medkit" style="color: #f44336;"></i> <strong>Medical Kits:</strong> Basic health supplies and hygiene kits</li>
-        <li><i class="fas fa-bed" style="color: #6f42c1;"></i> <strong>Furniture:</strong> Beds, chairs, and desks for comfort and learning</li>
-        <li><i class="fas fa-laptop" style="color: #343a40;"></i> <strong>Technology:</strong> Computers and internet for digital learning</li>
-        <li><i class="fas fa-gamepad" style="color: #ff5722;"></i> <strong>Entertainment:</strong> Toys, games, and tools for creative play</li>
-    </ul>
-    <p style="margin-top: 20px;">Every contribution brings us closer to making these dreams a reality. <strong>Thank you for your support!</strong> 💖</p>
-</section>
-
-    </ul>
-    <p>Every contribution brings us closer to making these dreams a reality. Thank you for your support!</p>
-</section>
 
 <section id="donate">
     <h2>Support Our Work</h2>
     <p>Your donation can change lives. Every contribution makes a real difference!</p>
-
-    <p>you can find full donation details on our <a href="donate.html">Donate Page</a>.</p> 
-
-    <a class="donate-btn" href="donate.html">View Donation Details</a>
+    <a class="donate-btn" href="https://wa.me/231881979445" target="_blank" onclick="showThankYou()">Donate Now</a>
 </section>
 
 <section id="contact">
     <h2>Contact Us</h2>
-    <p>Email: <a href="mailto:samuelktwumasi@gmail.com">samuelktwumasi@gmail.com</a></p>
+    <p>Email: Samuelktwumasi0@gmail.com</p>
     <p>Phone/WhatsApp: +231 881979445</p>
     <p>Website: <a href="https://helptheneediest.github.io/help-the-neediest/" target="_blank">Visit Here</a></p>
 </section>
@@ -118,6 +107,14 @@
 <footer>
     <p>&copy; 2025 Help the Neediest. All rights reserved.</p>
 </footer>
+
+<script>
+    function showThankYou() {
+        setTimeout(function() {
+            alert("Thank you for your support! Please send the donation details in WhatsApp or our Gmail.");
+        }, 1000);
+    }
+</script>
 
 </body>
 </html>
