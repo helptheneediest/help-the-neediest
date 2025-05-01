@@ -69,6 +69,29 @@
             margin-top: 30px;
         }
     </style>
+    .faq-question {
+        width: 100%;
+        text-align: left;
+        padding: 12px;
+        background: #f7a500;
+        border: none;
+        color: white;
+        font-size: 16px;
+        cursor: pointer;
+        margin-top: 10px;
+        border-radius: 5px;
+    }
+
+    .faq-answer {
+        max-height: 0;
+        overflow: hidden;
+        transition: max-height 0.3s ease-out;
+        background: #fff;
+        padding: 0 12px;
+        border-radius: 0 0 5px 5px;
+    }
+</style>
+   
 </head>
 
   ...
@@ -255,7 +278,22 @@
     <p>Phone/WhatsApp: +231 881979445 or call: 887107388</p>
     <p>Website: <a href="https://helptheneediest.github.io/help-the-neediest/" target="_blank">Visit Here</a></p>
 </section>
-    
+<section id="faqs">
+  <h2>Frequently Asked Questions</h2>
+
+  <div class="faq">
+    <button class="faq-question">How can I donate?</button>
+    <div class="faq-answer">
+      <p>You can donate using Western Union, MoneyGram, or Mobile Money. Details are provided on our Donate page.</p>
+    </div>
+  </div>
+
+  <div class="faq">
+    <button class="faq-question">Where does my donation go?</button>
+    <div class="faq-answer">
+      <p>Your donation helps build facilities like a hostel, library, and playground, and supports basic needs and education for children.</p>
+    </div>
+  </div>
 </section>
 
 <footer>
