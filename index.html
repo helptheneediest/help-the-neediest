@@ -109,15 +109,35 @@
 </section>
 
 <section id="donate">
-  <h2 class="section-title">Make a Donation</h2>
-  <p>Your support means the world to us. Every donation helps improve the life of a child in need.</p>
-  <button class="donate-btn" onclick="togglePopup()">Donate Now</button>
-  <div id="popup" class="popup">
+  <h2>Support Our Work</h2>
+  <p>Your donation can change lives. Every contribution makes a real difference!</p>
+  
+  <button class="donate-btn" onclick="toggleDonationDetails()">Donate Now</button>
+  
+  <div id="donationDetails" style="display: none; margin-top: 20px; background: #fff; padding: 20px; border-radius: 10px; box-shadow: 0 2px 10px rgba(0,0,0,0.1);">
+    <h3>Donation Methods</h3>
     <p><strong>Receiver Name:</strong> TWUMASI SAMUEL (Founder)</p>
     <ul>
-      <li><strong>Western Union</strong></li>
-      <li><strong>MoneyGram</strong></li>
+      <li><strong>Western Union:</strong> TWUMASI SAMUEL</li>
+      <li><strong>MoneyGram:</strong> TWUMASI SAMUEL</li>
       <li><strong>Mobile Money:</strong> +231 881979445</li>
+    </ul>
+    <p><strong>After sending your donation, please confirm by contacting us:</strong></p>
+    <ul>
+      <li><a href="https://wa.me/231881979445" target="_blank">Send on WhatsApp</a></li>
+      <li><a href="mailto:helptheneediest@gmail.com">Email: helptheneediest@gmail.com</a></li>
+    </ul>
+    <p style="color: green; font-weight: bold;">Thank you for your support!</p>
+  </div>
+
+  <script>
+    function toggleDonationDetails() {
+      var section = document.getElementById('donationDetails');
+      section.style.display = (section.style.display === 'none') ? 'block' : 'none';
+    }
+  </script>
+</section>
+
     </ul>
     <p>After donating, please send the confirmation code via WhatsApp or email us.</p>
     <a href="https://wa.me/231881979445" target="_blank">Send via WhatsApp</a><br>
