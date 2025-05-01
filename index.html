@@ -1,135 +1,139 @@
-
 <!DOCTYPE html>
 <html lang="en">
-<head> 
-  <meta name="goole-site verification" contnt
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Help the Neediest</title>
-    <link rel="icon" type="image/png" href="mylogo.png">
-    <style>
-        body {
-            font-family: Arial, sans-serif;
-            margin: 0;
-            padding: 0;
-            background: #f9f9f9;
-            color: #333;
-        }
-        header {
-            background-color: #f7961e;
-            color: white;
-            padding: 20px;
-            text-align: center;
-        }
-        nav {
-            background: #d97706;
-            padding: 10px;
-            text-align: center;
-        }
-        nav a {
-            color: white;
-            margin: 0 15px;
-            text-decoration: none;
-            font-weight: bold;
-        }
-        section {
-            padding: 30px;
-        }
-        .donate-btn {
-            display: inline-block;
-            background-color: #5cb85c;
-            color: white;
-            padding: 15px 25px;
-            font-size: 18px;
-            text-decoration: none;
-            border-radius: 5px;
-            margin-top: 20px;
-        }
-        .footer {
-            background: #222;
-            color: #ccc;
-            text-align: center;
-            padding: 15px;
-        }
-        details summary {
-            font-weight: bold;
-            cursor: pointer;
-            margin-top: 15px;
-        }
-    </style>
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Help the Neediest</title>
+  <meta name="description" content="Help the Neediest - Giving Hope. Changing Lives.">
+  <link rel="icon" type="image/png" href="logo.png">
+  <style>
+    body {
+      margin: 0;
+      font-family: Arial, sans-serif;
+      background: #f5f5f5;
+      color: #333;
+    }
+    header {
+      background-color: #f79520;
+      color: white;
+      padding: 20px;
+      text-align: center;
+    }
+    header img {
+      width: 100px;
+      border-radius: 50%;
+    }
+    nav {
+      background: #444;
+      text-align: center;
+      padding: 10px;
+    }
+    nav a {
+      color: white;
+      margin: 0 15px;
+      text-decoration: none;
+      font-weight: bold;
+    }
+    section {
+      padding: 20px;
+      max-width: 900px;
+      margin: auto;
+    }
+    .donate-btn {
+      background-color: #5cb85c;
+      color: white;
+      padding: 12px 20px;
+      font-size: 16px;
+      border: none;
+      border-radius: 5px;
+      cursor: pointer;
+      margin-top: 10px;
+    }
+    .popup {
+      display: none;
+      background: #fff;
+      border: 2px solid #ccc;
+      padding: 20px;
+      margin-top: 15px;
+      border-radius: 10px;
+    }
+    footer {
+      background-color: #222;
+      color: white;
+      text-align: center;
+      padding: 15px;
+      margin-top: 30px;
+    }
+    .section-title {
+      color: #f79520;
+    }
+  </style>
 </head>
 <body>
 
 <header>
-    <img src="logo.png" alt="myLogo" width="100" style="border-radius: 50px;">
-    <h1>Help the Neediest</h1>
-    <p>Giving Hope. Changing Lives.</p>
+  <img src="logo.png" alt="HTN Logo">
+  <h1>Help the Neediest</h1>
+  <p>Giving Hope. Changing Lives.</p>
+  <p><strong>About Us:</strong> We are a charitable organization supporting vulnerable children through education, shelter, life skills, and emotional care. We believe every child deserves a chance to thrive.</p>
 </header>
 
 <nav>
-    <a href="#about">About</a>
-    <a href="#donate">Donate</a>
-    <a href="#contact">Contact</a>
+  <a href="#mission">Our Mission</a>
+  <a href="#needs">What We Need</a>
+  <a href="#testimonial">Testimonial</a>
+  <a href="#donate">Donate</a>
 </nav>
 
-<section id="about">
-    <h2>About Us</h2>
-    <p>Help the Neediest (HTN) is a charitable organization founded by Twumasi Samuel. Our mission is to provide essential support and long-term solutions to the most vulnerable members of our society—especially children—through education, shelter, healthcare, and mentoring programs.</p>
-</section>
-
 <section id="mission">
-    <h2>Our Mission</h2>
-    <p>To empower impoverished children and families by giving them access to basic human needs and the tools to build a self-sufficient future. We believe in compassion, integrity, and lasting change.</p>
+  <h2 class="section-title">Our Mission</h2>
+  <p>Our mission is to transform the lives of underprivileged children by giving them access to quality education, safe housing, healthcare, and personal development programs.</p>
 </section>
 
 <section id="needs">
-    <h2>What We Need</h2>
-    <ul>
-        <li>Construction of a children's hostel</li>
-        <li>Establishment of a library and study center</li>
-        <li>Playground and recreational facilities</li>
-        <li>Healthcare kits and nutritional food</li>
-        <li>School supplies, books, uniforms, and shoes</li>
-        <li>Volunteer mentors and teachers</li>
-    </ul>
+  <h2 class="section-title">What We Need</h2>
+  <ul>
+    <li>Hostel building materials</li>
+    <li>Books and school supplies</li>
+    <li>Computers and internet access</li>
+    <li>Playground and recreational equipment</li>
+    <li>Library resources</li>
+    <li>Food and clothing donations</li>
+  </ul>
+</section>
+
+<section id="testimonial">
+  <h2 class="section-title">Testimonial</h2>
+  <p>“Before I met HTN, I had no hope of completing school. Today, I’m in college and mentoring younger children. Thank you HTN for changing my life!” – Emmanuel K.</p>
 </section>
 
 <section id="donate">
-    <h2>Support Our Work</h2>
-    <a class="donate-btn" onclick="showDonationInfo()">Click to Donate</a>
-    <div id="donationInfo" style="display:none; margin-top: 20px;">
-        <p><strong>Receiving Methods:</strong></p>
-        <ul>
-        </ul>
-        <p>After donation, please send the transaction details to us via WhatsApp or Gmail.</p>
-        <script>
-            function showDonationInfo() {
-                const info = document.getElementById('donationInfo');
-                info.style.display = 'block';
-                alert("Thank you for your support! Please send the donation details in WhatsApp or our Gmail.");
-                window.open("https://wa.me/231881979445", '_blank');
-            }
-        </script>
-    </div>
+  <h2 class="section-title">Make a Donation</h2>
+  <p>Your support means the world to us. Every donation helps improve the life of a child in need.</p>
+  <button class="donate-btn" onclick="togglePopup()">Donate Now</button>
+  <div id="popup" class="popup">
+    <p><strong>Receiver Name:</strong> TWUMASI SAMUEL (Founder)</p>
+    <ul>
+      <li><strong>Western Union</strong></li>
+      <li><strong>MoneyGram</strong></li>
+      <li><strong>Mobile Money:</strong> +231 881979445</li>
+    </ul>
+    <p>After donating, please send the confirmation code via WhatsApp or email us.</p>
+    <a href="https://wa.me/231881979445" target="_blank">Send via WhatsApp</a><br>
+    <a href="mailto:helptheneediest@gmail.com">Send via Email</a>
+  </div>
 </section>
 
-<section id="testimonials">
-    <h2>Testimonials</h2>
-    <p><em>"HTN helped my children go back to school when we had lost hope. Their team is truly doing God's work."</em> – A grateful parent</p>
-    <p><em>"I volunteered with HTN for three months. It was life-changing to see the impact up close."</em> – Community Volunteer</p>
-</section>
-
-<section id="contact">
-    <h2>Contact Us</h2>
-    <p>Email: <a href="mailto: samuelktwumasi0@gmail.com">samuelktwumasi0@gmail.com</a></p>
-    <p>Phone / WhatsApp: +231 881979445 or call:887107388</p>
-    <p>Website: <a href="https://helptheneediest.github.io/help-the-neediest/" target="_blank">Visit Here</a></p>
-</section>
-
-<footer class="footer">
-    <p>&copy; 2025 Help the Neediest. All rights reserved.</p>
+<footer>
+  <p>&copy; 2025 Help the Neediest. All rights reserved.</p>
 </footer>
 
+<script>
+  function togglePopup() {
+    const popup = document.getElementById('popup');
+    popup.style.display = popup.style.display === 'block' ? 'none' : 'block';
+  }
+</script>
+
 </body>
-  </html>
-  
+</html>
