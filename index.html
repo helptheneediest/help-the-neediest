@@ -1,173 +1,170 @@
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta name="google-site verificaton" content="6QbdqUox5_k7BhXAcYhBt8zwfnx_ht00RbX3jWAQi40" />
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <meta name="description" content="Help the Neediest - Giving Hope. Changing Lives." />
   <title>Help the Neediest</title>
-  <link rel="icon" type="image/png" href="mylogo.png" />
+  <link rel="icon" href="logo.png" />
   <style>
-    <body/>
-    
-body::before {
-    content: "";
-    background: url('mylogo.png') no-repeat center center;
-    background-size: 300px auto;
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    opacity: 0.05;
-    z-index: -1;
-}
-
-
-    
+    body {
+      margin: 0;
+      font-family: Arial, sans-serif;
+      background-color: #f8f9fa;
+      color: #333;
     }
-
     header {
-      background-color: #f7941e;
+      background-color: #ff6f00;
       color: white;
       text-align: center;
-      padding: 30px 20px;
-      position: relative;
+      padding: 30px 20px 10px;
     }
-
     header img {
-      width: 100px;
+      width: 90px;
       border-radius: 50%;
     }
-
-    header .about-link {
-      display: block;
+    .about-link {
       margin-top: 10px;
       color: white;
-      font-weight: bold;
       text-decoration: underline;
       cursor: pointer;
+      font-size: 16px;
     }
-
+    nav {
+      background: #ffa500;
+      text-align: center;
+      padding: 10px;
+    }
+    nav a {
+      color: white;
+      text-decoration: none;
+      margin: 0 15px;
+      font-weight: bold;
+    }
     section {
-      padding: 40px 20px;
+      padding: 30px 20px;
     }
-
-    h2 {
-      color: #f7941e;
-    }
-
     .donate-btn {
-      background-color: #4caf50;
+      display: inline-block;
+      background-color: #28a745;
       color: white;
       padding: 12px 20px;
-      border: none;
-      font-size: 16px;
       border-radius: 5px;
-      cursor: pointer;
+      font-size: 18px;
       margin-top: 10px;
+      cursor: pointer;
     }
-
-    .donation-details {
+    .popup {
       display: none;
-      margin-top: 15px;
-      padding: 15px;
-      background: #e6f7ff;
-      border-left: 4px solid #2196f3;
+      position: fixed;
+      top: 50%;
+      left: 50%;
+      width: 90%;
+      max-width: 400px;
+      transform: translate(-50%, -50%);
+      background: white;
+      border: 2px solid #28a745;
+      padding: 20px;
+      z-index: 1000;
+      box-shadow: 0 0 10px rgba(0,0,0,0.3);
     }
-
-    .footer {
-      background: #222;
-      color: #ccc;
+    .popup h3 {
+      margin-top: 0;
+    }
+    .popup-close {
+      text-align: right;
+      cursor: pointer;
+      font-weight: bold;
+    }
+    footer {
+      background: #333;
+      color: white;
       text-align: center;
       padding: 15px;
-      font-size: 14px;
+      margin-top: 20px;
     }
-
-    a {
-      color: #2196f3;
+    .section-title {
+      color: #ff6f00;
     }
   </style>
 </head>
 <body>
 
-  <header>
-    <img src="mylogo.png" alt="myLogo" />
-    <h1>Help the Neediest</h1>
-    <p>Giving Hope. Changing Lives.</p>
-    <span class="about-link" onclick="scrollToSection('about')">About</span>
-  </header>
+<header>
+  <img src="logo.png" alt="HTN Logo" />
+  <h1>Help the Neediest</h1>
+  <div class="about-link" onclick="document.getElementById('about').scrollIntoView({ behavior: 'smooth' });">About</div>
+</header>
 
-  <section id="about">
-    <h2>About Us</h2>
-    <p>Help the Neediest (HTN) is a non-profit organization dedicated to improving the lives of vulnerable children through education, shelter, healthcare, and community support. We believe that every child deserves a future filled with hope and opportunity.</p>
-  </section>
+<nav>
+  <a href="#mission">Our Mission</a>
+  <a href="#needs">What We Need</a>
+  <a href="#testimonials">Testimonials</a>
+  <a href="#donate">Donate</a>
+</nav>
 
-  <section id="mission">
-    <h2>Our Mission</h2>
-    <p>Our mission is to empower underprivileged children and families through sustainable support, resources, and education to create long-term positive impact.</p>
-  </section>
+<section id="about">
+  <h2 class="section-title">About Us</h2>
+  <p>We are a non-profit organization working to support underprivileged children through education, shelter, healthcare, and empowerment. Founded by Twumasi Samuel, our goal is to bring lasting change to the lives of the most vulnerable.</p>
+</section>
 
-  <section id="needs">
-    <h2>What We Need</h2>
-    <ul>
-      <li>Hostel building materials</li>
-      <li>Library books and shelves</li>
-      <li>Playground equipment</li>
-      <li>Stationery and school supplies</li>
-      <li>Food and hygiene kits</li>
-    </ul>
-  </section>
+<section id="mission">
+  <h2 class="section-title">Our Mission</h2>
+  <p>To provide hope, opportunity, and support to children in need by equipping them with the tools for a better future.</p>
+</section>
 
-  <section id="goal">
-    <h2>Our Goal</h2>
-    <p>To build a full resource center that provides a home, library, and recreational space for children in need, while equipping them with tools to thrive.</p>
-  </section>
+<section id="needs">
+  <h2 class="section-title">What We Need</h2>
+  <ul>
+    <li>Books and school supplies</li>
+    <li>Clothing and food items</li>
+    <li>Funding for building a hostel, library, and playground</li>
+    <li>Educational sponsorships</li>
+  </ul>
+</section>
 
-  <section id="testimonial">
-    <h2>Testimonials</h2>
-    <p>"HTN gave me a chance to go back to school and dream again. I’m so thankful!" — Emmanuel, 12</p>
-    <p>"I’ve never seen such dedication to children’s future. Truly inspiring!" — Sarah, Community Leader</p>
-  </section>
+<section id="testimonials">
+  <h2 class="section-title">Testimonials</h2>
+  <p>"Thanks to Help the Neediest, I now go to school and dream of becoming a teacher!" – Mary, Age 10</p>
+  <p>"This organization gave me shelter and a second chance at life." – James, Age 14</p>
+</section>
 
-  <section id="donate">
-    <h2>Support Our Work</h2>
-    <button class="donate-btn" onclick="toggleDonation()">Donate Now</button>
-    <div class="donation-details" id="donationDetails">
-      <p><strong>Receiving Methods:</strong></p>
-      <ul>
-        <li><strong>Western Union:</strong> TWUMASI SAMUEL (Founder)</li>
-        <li><strong>MoneyGram:</strong> TWUMASI SAMUEL</li>
-        <li><strong>Mobile Money:</strong> +231 881979445 or887107388 </li>
-      </ul>
-      <p>After donating, please send the confirmation number via <a href="https://wa.me/231881979445" target="_blank">WhatsApp</a> or email us at <a href="mailto:samuelktwumasi@gmail.com">samuelktwumasi0@gmail.com</a>.</p>
-      <p><strong>Thank you for your support!</strong></p>
-    </div>
-  </section>
+<section id="donate">
+  <h2 class="section-title">Support Our Work</h2>
+  <p>Click below to see donation options and help us continue this mission.</p>
+  <div class="donate-btn" onclick="showPopup()">Donate Now</div>
+</section>
 
-  <section id="contact">
-    <h2>Contact Us</h2>
-    <p>Email: <a href="mailto:samuelktwumasi0@gmail.com">samuelktwumasi0@gmail.com</a></p>
-    <p>Phone / WhatsApp: <a href="https://wa.me/231881979445/887107388 " target="_blank">+231 881979445/887107388</a></p>
-  </section>
+<div id="popup" class="popup">
+  <div class="popup-close" onclick="closePopup()">X</div>
+  <h3>Donation Details</h3>
+  <p><strong>Founder & Receiver Name:</strong> TWUMASI SAMUEL</p>
+  <ul>
+    <li><strong>Western Union:</strong> TWUMASI SAMUEL</li>
+    <li><strong>MoneyGram:</strong> TWUMASI SAMUEL</li>
+    <li><strong>Mobile Money:</strong> +231 881979445</li>
+  </ul>
+  <p>Thank you for your support! Please send the donation details via <a href="https://wa.me/231881979445" target="_blank">WhatsApp</a> or to <a href="mailto:helptheneediest@gmail.com">our Gmail</a>.</p>
+</div>
 
-  <div class="footer">
-    &copy; 2025 Help the Neediest. All rights reserved.
-  </div>
+<footer>
+  <p>Contact: <a href="mailto:helptheneediest@gmail.com" style="color:white;">helptheneediest@gmail.com</a> | WhatsApp: +231 881979445</p>
+  <p>&copy; 2025 Help the Neediest. All rights reserved.</p>
+</footer>
 
-  <script>
-    function toggleDonation() {
-      const details = document.getElementById("donationDetails");
-      details.style.display = details.style.display === "block" ? "none" : "block";
-    }
+<script>
+  function showPopup() {
+    document.getElementById("popup").style.display = "block";
+  }
 
-    function scrollToSection(id) {
-      const section = document.getElementById(id);
-      if (section) {
-        section.scrollIntoView({ behavior: "smooth" });
-      }
-    }
-  </script>
+  function closePopup() {
+    document.getElementById("popup").style.display = "none";
+  }
+</script>
 
 </body>
 </html>
+
+Let me know if you’d like to split this into multiple pages or add more features like a gallery or sponsor logos.
+
