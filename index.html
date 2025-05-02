@@ -8,25 +8,8 @@
   <title>Help the Neediest</title>
   <link rel="icon" type="image/png" href="mylogo.png" />
   <style>
-    Yes, you can definitely blend your logo into the background as a soft watermark-style image. It creates a subtle branded feel without distracting from the main content.
-
-Here’s how we can do it:
-
-1. Add your logo as a background image
-
-In your CSS, under the body selector, add this:
-
-background-image: url('logo.png');
-background-repeat: no-repeat;
-background-position: center;
-background-size: 300px auto;
-background-attachment: fixed;
-opacity: 0.05;
-
-However, opacity: 0.05; on body will affect all content. So instead, use a pseudo-element to apply it only to the background:
-
-2. Better approach using a pseudo-element:
-
+    <body/>
+    
 body::before {
     content: "";
     background: url('mylogo.png') no-repeat center center;
