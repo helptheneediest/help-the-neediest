@@ -239,6 +239,21 @@ function nextSlide() {
 setInterval(nextSlide, 3000); // Change image every 3 seconds
 showSlide(currentSlide);
 </script>
+<script>
+let scrollTopBtn = document.getElementById("scrollTopBtn");
+
+window.onscroll = function() {
+  if (document.body.scrollTop > 200 || document.documentElement.scrollTop > 200) {
+    scrollTopBtn.style.display = "block";
+  } else {
+    scrollTopBtn.style.display = "none";
+  }
+};
+
+function topFunction() {
+  window.scrollTo({ top: 0, behavior: 'smooth' });
+}
+</script>
 <button onclick="topFunction()" id="scrollTopBtn" title="Go to top">↑</button>
 </body>
 </html>
