@@ -165,7 +165,40 @@ background-size: contain;
         <h2>Our Mission</h2>
         <p>To transform the lives of the most disadvantaged children through holistic care, empowering them to become leaders in their communities.</p>
     </section>
+   <script>
+const counters = document.querySelectorAll(".count");
+const speed = 200;
 
+const animateCounts = () => {
+  counters.forEach((counter) => {
+    const updateCount = () => {
+      const target = +counter.getAttribute("data-count");
+      const count = +counter.innerText;
+      const increment = Math.ceil(target / speed);
+
+      if (count < target) {
+        counter.innerText = count + increment;
+        setTimeout(updateCount, 20);
+      } else {
+        counter.innerText = target;
+      }
+    };
+    updateCount();
+  });
+};
+
+let statsSeen = false;
+window.addEventListener("scroll", function () {
+  const stats = document.getElementById("stats");
+  const statsTop = stats.getBoundingClientRect().top;
+  const screenPosition = window.innerHeight;
+
+  if (!statsSeen && statsTop < screenPosition) {
+    animateCounts();
+    statsSeen = true;
+  }
+});
+</script>
     <section id="stats" style="text-align:center; padding: 50px 20px; background-color: #f9f9f9;">
   <h2 style="margin-bottom: 30px;">Our Impact</h2>
   <div style="display: flex; justify-content: center; gap: 40px; flex-wrap: wrap;">
