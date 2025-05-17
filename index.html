@@ -443,7 +443,21 @@ function topFunction() {
   });
 </script>
 </body>
+<script>
+  const topBtn = document.getElementById("backToTopBtn");
 
+  window.onscroll = function () {
+    if (document.body.scrollTop > 100 || document.documentElement.scrollTop > 100) {
+      topBtn.style.display = "block";
+    } else {
+      topBtn.style.display = "none";
+    }
+  };
+
+  function topFunction() {
+    window.scrollTo({ top: 0, behavior: 'smooth' });
+  }
+</script>
 <a href="https://wa.me/yourwhatsappphonenumber" target="_blank" id="whatsapp-chat" title="Chat with us on WhatsApp" style="
   position: fixed;
   bottom: 90px;
