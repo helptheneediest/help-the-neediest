@@ -240,20 +240,43 @@ window.addEventListener("scroll", function () {
         </ul>
     </section>
   
-<section id="testimonials" style="background: #fff8f0; padding: 50px 20px; text-align: center;">
+<section id="testimonials" style="background: #fff8f0; padding: 60px 20px; text-align: center;">
   <h2 style="font-size: 28px; margin-bottom: 40px; color: #333;">What People Say</h2>
-  <div style="display: flex; flex-wrap: wrap; justify-content: center; gap: 30px;">
-    <div style="background: #ffffff; padding: 20px; border-radius: 12px; box-shadow: 0 4px 12px rgba(0,0,0,0.1); max-width: 300px;">
+  <div class="testimonial-slider" style="max-width: 600px; margin: 0 auto; position: relative;">
+    <div class="testimonial-item" style="display: block;">
+      <img src="https://via.placeholder.com/80" alt="Parent" style="border-radius: 50%; margin-bottom: 15px;">
       <p style="font-style: italic;">“HTN has truly made a difference in our lives. We’re grateful for the support given to our children.”</p>
       <strong>- Mary K., Grateful Parent</strong>
     </div>
-    <div style="background: #ffffff; padding: 20px; border-radius: 12px; box-shadow: 0 4px 12px rgba(0,0,0,0.1); max-width: 300px;">
+    <div class="testimonial-item" style="display: none;">
+      <img src="https://via.placeholder.com/80" alt="Donor" style="border-radius: 50%; margin-bottom: 15px;">
       <p style="font-style: italic;">“Supporting HTN was the best decision. Their mission is pure and the impact is visible.”</p>
       <strong>- Samuel D., Donor</strong>
     </div>
-    <div style="background: #ffffff; padding: 20px; border-radius: 12px; box-shadow: 0 4px 12px rgba(0,0,0,0.1); max-width: 300px;">
+    <div class="testimonial-item" style="display: none;">
+      <img src="https://via.placeholder.com/80" alt="Community Leader" style="border-radius: 50%; margin-bottom: 15px;">
       <p style="font-style: italic;">“Thanks to HTN, we now have a clean water system and a playground for the kids.”</p>
       <strong>- Amina L., Community Leader</strong>
+    </div>
+  </div>
+</section>
+
+<script>
+  const testimonials = document.querySelectorAll('.testimonial-item');
+  let currentIndex = 0;
+
+  function showTestimonial(index) {
+    testimonials.forEach((item, i) => {
+      item.style.display = i === index ? 'block' : 'none';
+    });
+  }
+
+  setInterval(() => {
+    currentIndex = (currentIndex + 1) % testimonials.length;
+    showTestimonial(currentIndex);
+  }, 5000); // Change every 5 seconds
+</script>
+
     </div>
   </div>
 </section>
