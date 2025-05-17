@@ -311,16 +311,49 @@ window.addEventListener("scroll", function () {
         <div class="faq-content" id="faq-content">
             <p>We provide support to vulnerable children through education, shelter, life skills, and healthcare programs.</p>
         </div>
-    </section>
 
-    <section id="newsletter" style="background: #f9f9f9; padding: 40px 20px; text-align: center;">
+    </section>
+<section id="newsletter" style="background: #f9f9f9; padding: 40px 20px; text-align: center;">
   <h2>Subscribe to Our Newsletter</h2>
   <p>Get updates about our work, impact stories, and upcoming projects.</p>
-  <form action="#" method="post" style="max-width: 500px; margin: 0 auto;">
+  <form id="newsletterForm" action="https://formspree.io/f/YOUR_FORMSPREE_URL_HERE" method="POST" style="max-width: 500px; margin: 0 auto;">
     <input type="text" name="name" placeholder="Your Name" required style="width: 100%; padding: 10px; margin: 10px 0;">
     <input type="email" name="email" placeholder="Your Email Address" required style="width: 100%; padding: 10px; margin: 10px 0;">
     <button type="submit" style="padding: 12px 25px; background-color: orange; border: none; color: white; font-weight: bold; cursor: pointer;">Subscribe</button>
   </form>
+
+  <div id="popup" style="display:none; margin-top:20px; color:green; font-weight:bold;">
+    Thank you for subscribing!
+  </div>
+</section>
+
+<script>
+  const form = document.getElementById('newsletterForm');
+  const popup = document.getElementById('popup');
+
+  form.addEventListener('submit', function(e) {
+    e.preventDefault();
+    const formData = new FormData(form);
+    fetch(form.action, {
+      method: form.method,
+      body: formData,
+      headers: { 'Accept': 'application/json' }
+    }).then(response => {
+      if (response.ok) {
+        popup.style.display = 'block';
+        form.reset();
+      } else {
+        popup.innerHTML = 'Oops! There was a problem. Please try again.';
+        popup.style.color = 'red';
+        popup.style.display = 'block';
+      }
+    }).catch(error => {
+      popup.innerHTML = 'Oops! Network error. Please try again.';
+      popup.style.color = 'red';
+      popup.style.display = 'block';
+    });
+  });
+</script>
 </section>
     <section id="contact">
         <h2>Contact Us</h2>
